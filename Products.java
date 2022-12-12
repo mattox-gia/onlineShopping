@@ -2,7 +2,7 @@ public class Products {
     private String category;
     private double price;
 
-    public Products(){
+    public Products(double price, String category){
         this.category = category;
         this.price = price;
     }
@@ -26,5 +26,6 @@ public class Products {
     public String toString(){
         return "x";
     }
+    
 
 }

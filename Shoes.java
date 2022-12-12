@@ -1,12 +1,13 @@
 public class Shoes extends Products{
     private double shoeSize;
     private String shoeColor;
-    private double shoePrice;
 
-    public Shoes(double shoeSize, String shoeColor, double shoePrice){
+
+    public Shoes(double shoeSize, String shoeColor, double price, String category){
+        super(price,category);
         shoeSize = shoeSize;
         shoeColor = shoeColor;
-        shoePrice = shoePrice;
+        
     }
 
     public double getShoeSize() {
@@ -25,18 +26,16 @@ public class Shoes extends Products{
         this.shoeColor = shoeColor;
     }
 
-    public double getShoePrice() {
-        return shoePrice;
+    public double getTotal(){
+        return getPrice();
+        
     }
-
-    public void setShoePrice(double shoePrice) {
-        this.shoePrice = shoePrice;
-    }
-
+    
     public String toString(){
-        return "x";
+        return "Size: "+shoeSize+" Color: "+shoeColor+" Price: "+super.getPrice()+" Category: "+super.getCategory();
+        }
     }
 
-}
+
 
 

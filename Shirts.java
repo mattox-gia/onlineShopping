@@ -1,12 +1,13 @@
 public class Shirts extends Products{
     private String shirtSize;
     private String shirtColor;
-    private double shirtPrice;
 
-    public Shirts(String shirtSize,String shirtColor,double shirtPrice){
+
+    public Shirts(String shirtSize,String shirtColor,double price, String category){
+        super(price,category);
         shirtSize = shirtSize;
         shirtColor = shirtColor;
-        shirtPrice = shirtPrice;
+      
     }
 
     public String getShirtSize() {
@@ -25,16 +26,13 @@ public class Shirts extends Products{
         this.shirtColor = shirtColor;
     }
 
-    public double getShirtPrice() {
-        return shirtPrice;
-    }
-
-    public void setShirtPrice(double shirtPrice) {
-        this.shirtPrice = shirtPrice;
+    public double getTotal(){
+        return getPrice();
+        
     }
 
     public String toString(){
-        return "x";
+        return "Size: "+shirtSize+" Color: "+shirtColor+" Price: "+super.getPrice()+" Category: "+super.getCategory();
     }
 
 }
