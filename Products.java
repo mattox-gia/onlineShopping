@@ -24,7 +24,7 @@ public class Products {
     }
 
     public String toString(){
-        return "x";
+        return "Price: "+price+" Category: "+category;
     }
     
 
