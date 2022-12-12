@@ -5,8 +5,8 @@ public class Shirts extends Products{
 
     public Shirts(String shirtSize,String shirtColor,double price, String category){
         super(price,category);
-        shirtSize = shirtSize;
-        shirtColor = shirtColor;
+        this.shirtSize = shirtSize;
+        this.shirtColor = shirtColor;
       
     }
 
