@@ -23,13 +23,14 @@ public class Website{
                 case 1:
                 System.out.println("Order ID: ");
                 int orderID = sc.nextInt();
+                sc.nextLine();
                 
 
                 System.out.println("Month that the Order was placed in number form: ");
-                sc.nextInt();
-                String orderDate = sc.nextLine();
-                int orderNumProducts = orders.size();
-                Order o = new Order(orderID, orderNumProducts,orderDate);
+
+                String dateOrders = sc.nextLine();
+
+                Order o = new Order(orderID, dateOrders);
                 orders.add(o);
                 break;
 
@@ -38,13 +39,14 @@ public class Website{
                 for (int i =0; i<orders.size(); i++){
                     System.out.println(i+" "+orders.get(i));
                 }
+               
 
                 int a = -1;
                 while(ans != 0){
                     System.out.println("1. Add to Order");
                     System.out.println("2. Remove an Item");
                     System.out.println("3. Cancel Order");
-                    sc.nextInt();
+                    a = sc.nextInt();
                     sc.nextLine();
 
                     for(int i = 0; i<orders.size();i++){
@@ -68,7 +70,7 @@ public class Website{
 
                         case 3:
                         System.out.println("Cancel Order");
-                        //e.setStatus("Cancelled");
+                        
                         break;
 
 
@@ -81,7 +83,9 @@ public class Website{
 
                 case 3:
                 System.out.println("List Orders");
-
+                for (int i =0; i<orders.size(); i++){
+                    System.out.println(i+" "+orders.get(i));
+                }
                 break;
 
                 case 4:
