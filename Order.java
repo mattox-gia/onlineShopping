@@ -1,11 +1,11 @@
 public class Order {
     private int orderID;
-    private int orderNumProducts;
+ 
     private String dateOrders;   
 
-    public Order(int orderID, int orderNumProducts, String dateOrders) {
+    public Order(int orderID,String dateOrders) {
         this.orderID = orderID;
-        this.orderNumProducts = orderNumProducts;
+      
         this.dateOrders = dateOrders;
     }
 
@@ -18,14 +18,6 @@ public class Order {
         this.orderID = orderID;
     }
 
-    public int getOrderNumProducts() {
-        return orderNumProducts;
-    }
-
-    public void setOrderNumProducts(int orderNumProducts) {
-        this.orderNumProducts = orderNumProducts;
-    }
-
     public String getDateOrders() {
         return dateOrders;
     }
@@ -34,6 +26,9 @@ public class Order {
         this.dateOrders = dateOrders;
     }
 
+    public String toString(){
+        return "Order ID: "+orderID+" Order Date: "+dateOrders;
+    }
 
 
     
