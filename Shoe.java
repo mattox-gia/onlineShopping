@@ -1,9 +1,9 @@
-public class Shoes extends Products{
+public class Shoe extends Product{
     private double shoeSize;
     private String shoeColor;
 
 
-    public Shoes(double shoeSize, String shoeColor, double price, String category){
+    public Shoe(double shoeSize, String shoeColor, double price, String category){
         super(price,category);
         this.shoeSize = shoeSize;
         this.shoeColor = shoeColor;

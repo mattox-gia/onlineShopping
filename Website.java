@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Website{
     private static ArrayList<Order>  orders = new ArrayList<>();
-    private static ArrayList<Products> products = new ArrayList<>();
+    private static ArrayList<Product> products = new ArrayList<>();
     private static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class Website{
             System.out.println("1. Add to Order");
             System.out.println("2. Edit Order");
             System.out.println("3. List Orders");
-            System.out.println("4. Search for Order");
+            System.out.println("4. Cancel Order");
             System.out.println("0. Exit");
             System.out.println("Enter Choice:");
             ans = sc.nextInt();
@@ -31,6 +31,12 @@ public class Website{
                 String dateOrders = sc.nextLine();
 
                 Order o = new Order(orderID, dateOrders);
+                System.out.println("Add to Order");
+                        for(int i =0; i < products.size(); i++){
+                            System.out.println(i  +" "+products.get(i));
+                        }
+                        int t = sc.nextInt();sc.nextLine();
+                        o.add(products.get(t));
                 orders.add(o);
                 break;
 
@@ -45,7 +51,7 @@ public class Website{
                 while(ans != 0){
                     System.out.println("1. Add to Order");
                     System.out.println("2. Remove an Item");
-                    System.out.println("3. Cancel Order");
+                  
                     a = sc.nextInt();
                     sc.nextLine();
 
@@ -60,18 +66,41 @@ public class Website{
                     switch(a){
                         case 1:
                         System.out.println("Add to Order");
+                        for(int i =0; i < products.size(); i++){
+                            System.out.println(i  +" "+products.get(i));
+                        }
+                        int t_ = sc.nextInt();sc.nextLine();
+                        e.add(products.get(t_));
+                        // System.out.println("1. Shoes \n 2. Shirts");
+                        // int b = sc.nextInt();sc.nextLine();
+                        // if(b == 1){
+                        //     System.out.println("Shoe Size:");
+                        //     double ss = sc.nextDouble();
+                        //     System.out.println("Shoe Color:");
+                        //     String color = sc.nextLine();
+                        //     System.out.println("Price:");
+                        //     double  price = sc.nextDouble();
+                        //     Shoe  s = new Shoe(ss,color,price,"Shoe");
+                        //     e.add(s);
+
+
+                        // }else{
+
+                        // }
 
                         break;
 
                         case 2:
                         System.out.println("Remove Item");
-
+                        ArrayList<Product> oProducts =  e.getProducts();
+                        for(int i =0; i < oProducts.size(); i++){
+                            System.out.println(i+" "+oProducts.get(i));
+                        }
+                        int tt = sc.nextInt();sc.nextLine();
+                        oProducts.remove(tt);
                         break;
 
-                        case 3:
-                        System.out.println("Cancel Order");
-                        
-                        break;
+                
 
 
                     }
@@ -99,10 +128,10 @@ public class Website{
 
 
     public static void makeProducts(){
-        products.add(new Shirts("M","blue",24.99,"Shirt"));
-        products.add(new Shirts("L","green",18.99,"Shirt"));
-        products.add(new Shoes(8.5,"black",44.99,"Shoe"));
-        products.add(new Shoes(10,"grey",99.99,"Shoe"));
+        products.add(new Shirt("M","blue",24.99,"Shirt"));
+        products.add(new Shirt("L","green",18.99,"Shirt"));
+        products.add(new Shoe(8.5,"black",44.99,"Shoe"));
+        products.add(new Shoe(10,"grey",99.99,"Shoe"));
     }
 
 //     public static ArrayList<Food> getDishes(){

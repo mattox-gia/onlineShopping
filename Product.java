@@ -1,8 +1,8 @@
-public class Products {
+public class Product {
     private String category;
     private double price;
 
-    public Products(double price, String category){
+    public Product(double price, String category){
         this.category = category;
         this.price = price;
     }

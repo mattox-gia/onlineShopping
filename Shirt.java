@@ -1,9 +1,9 @@
-public class Shirts extends Products{
+public class Shirt extends Product{
     private String shirtSize;
     private String shirtColor;
 
 
-    public Shirts(String shirtSize,String shirtColor,double price, String category){
+    public Shirt(String shirtSize,String shirtColor,double price, String category){
         super(price,category);
         this.shirtSize = shirtSize;
         this.shirtColor = shirtColor;
