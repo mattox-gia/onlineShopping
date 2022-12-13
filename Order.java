@@ -5,9 +5,9 @@ public class Order {
     private ArrayList<Product> products;
     private String dateOrders;   
 
-    public Order(int orderID,String dateOrders) {
+    public Order(int orderID,String dateOrders, ArrayList<Product> products) {
         this.orderID = orderID;
-        products = new ArrayList<>();
+        this.products = new ArrayList<>();
         this.dateOrders = dateOrders;
     }
 
@@ -37,7 +37,7 @@ public class Order {
     }
 
     public String toString(){
-        return "Order ID: "+orderID+" Order Date: "+dateOrders;
+        return "Order ID: "+orderID+" Order Date: "+dateOrders+" Products: "+products;
     }
 
 
